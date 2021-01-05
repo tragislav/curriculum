@@ -3,7 +3,7 @@
 let demojsonstringify = {
     name: "Stanislav",
     surname: "Dykomenko",
-    age: 27,
+    age: 20,
     birthday: {
         day: 19,
         month: "July",
