@@ -1,5 +1,9 @@
 "use strict";
 
+let nameJSON = document.getElementById("nameJSON");
+let numberJSON = document.getElementById("numberJSON");
+let addJSON = document.getElementById("addJSON");
+
 let demojsonstringify = {
     name: "Stanislav",
     surname: "Dykomenko",
@@ -10,6 +14,19 @@ let demojsonstringify = {
         year: 2000
     }
 };
+
+function addInfo() {
+
+    let objectJSON = {}
+    objectJSON.name = nameJSON;
+    objectJSON.number = numberJSON;
+    alert(objectJSON.name);
+}
+
+addJSON.addEventListener('click', addInfo);
+
+
+
 
 let demojsonparse = '{"name":"Stanislav","surname":"Dykomenko","age":27,"birthday":{"day":19,"month":"July","year":2000}}';
 
