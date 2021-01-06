@@ -1,7 +1,7 @@
 "use strict";
 
-let nameJSON = document.getElementById("nameJSON");
-let numberJSON = document.getElementById("numberJSON");
+let nameJSON = document.getElementByValue("nameJSON");
+let numberJSON = document.getElementByValue("numberJSON");
 let addJSON = document.getElementById("addJSON");
 
 let demojsonstringify = {
@@ -20,7 +20,7 @@ function addInfo() {
     let objectJSON = {}
     objectJSON.name = nameJSON;
     objectJSON.number = numberJSON;
-    alert(objectJSON.name);
+    alert(objectJSON.number);
 }
 
 addJSON.addEventListener('click', addInfo);
