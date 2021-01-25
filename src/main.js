@@ -1,44 +1,10 @@
 "use strict";
 
-let nameJSON = document.getElementByValue("nameJSON");
-let numberJSON = document.getElementByValue("numberJSON");
-let addJSON = document.getElementById("addJSON");
+const wrapper = document.querySelector('.wrapper');
+const td = document.createElement('th');
+td.innerHTML = 'jdkjfdsk';
 
-let demojsonstringify = {
-    name: "Stanislav",
-    surname: "Dykomenko",
-    age: 20,
-    birthday: {
-        day: 19,
-        month: "July",
-        year: 2000
-    }
-};
-
-function addInfo() {
-
-    let objectJSON = {}
-    objectJSON.name = nameJSON;
-    objectJSON.number = numberJSON;
-    alert(objectJSON.number);
+for (let i = 0; i <10; i++) {
+    wrapper.append(td);
 }
 
-addJSON.addEventListener('click', addInfo);
-
-
-
-
-let demojsonparse = '{"name":"Stanislav","surname":"Dykomenko","age":27,"birthday":{"day":19,"month":"July","year":2000}}';
-
-console.log(JSON.stringify(demojsonstringify));
-console.log("_______________");
-console.log(JSON.parse(demojsonparse));
-
-$(document).on('click', '#btn', function () {
-    var formData = new FormData();
-    formData.append("myFile", document.getElementById("file").files[0], 'chris1.jpg');
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "index.html");
-    xhr.send(formData);
-});
